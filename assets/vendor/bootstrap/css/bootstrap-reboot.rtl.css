@@ -1,5 +1,10 @@
+/*!
+ * Bootstrap Reboot v5.3.3 (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 :root,
-[data-bs-theme='light'] {
+[data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -65,8 +70,8 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -93,6 +98,7 @@
   --bs-link-hover-color: #0a58ca;
   --bs-link-hover-color-rgb: 10, 88, 202;
   --bs-code-color: #d63384;
+  --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -118,7 +124,7 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
-[data-bs-theme='dark'] {
+[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
@@ -164,6 +170,8 @@
   --bs-link-color-rgb: 110, 168, 254;
   --bs-link-hover-color-rgb: 139, 185, 254;
   --bs-code-color: #e685b5;
+  --bs-highlight-color: #dee2e6;
+  --bs-highlight-bg: #664d03;
   --bs-border-color: #495057;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
   --bs-form-valid-color: #75b798;
@@ -205,12 +213,7 @@ hr {
   opacity: 0.25;
 }
 
-h6,
-h5,
-h4,
-h3,
-h2,
-h1 {
+h6, h5, h4, h3, h2, h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -324,6 +327,7 @@ small {
 
 mark {
   padding: 0.1875em;
+  color: var(--bs-highlight-color);
   background-color: var(--bs-highlight-bg);
 }
 
@@ -351,8 +355,7 @@ a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
 }
 
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
@@ -464,7 +467,7 @@ select {
   text-transform: none;
 }
 
-[role='button'] {
+[role=button] {
   cursor: pointer;
 }
 
@@ -475,20 +478,20 @@ select:disabled {
   opacity: 1;
 }
 
-[list]:not([type='date']):not([type='datetime-local']):not([type='month']):not([type='week']):not([type='time'])::-webkit-calendar-picker-indicator {
+[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 button:not(:disabled),
-[type='button']:not(:disabled),
-[type='reset']:not(:disabled),
-[type='submit']:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
   cursor: pointer;
 }
 
@@ -539,15 +542,15 @@ legend + * {
   height: auto;
 }
 
-[type='search'] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type='tel'],
-[type='url'],
-[type='email'],
-[type='number'] {
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] {
   direction: ltr;
 }
 ::-webkit-search-decoration {

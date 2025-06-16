@@ -1,5 +1,10 @@
+/*!
+ * Bootstrap Utilities v5.3.3 (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 :root,
-[data-bs-theme='light'] {
+[data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -65,8 +70,8 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -93,6 +98,7 @@
   --bs-link-hover-color: #0a58ca;
   --bs-link-hover-color-rgb: 10, 88, 202;
   --bs-code-color: #d63384;
+  --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -118,7 +124,7 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
-[data-bs-theme='dark'] {
+[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
@@ -164,6 +170,8 @@
   --bs-link-color-rgb: 110, 168, 254;
   --bs-link-hover-color-rgb: 139, 185, 254;
   --bs-code-color: #e685b5;
+  --bs-highlight-color: #dee2e6;
+  --bs-highlight-bg: #664d03;
   --bs-border-color: #495057;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
   --bs-form-valid-color: #75b798;
@@ -175,7 +183,7 @@
 .clearfix::after {
   display: block;
   clear: both;
-  content: '';
+  content: "";
 }
 
 .text-bg-primary {
@@ -223,8 +231,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-primary:hover,
-.link-primary:focus {
+.link-primary:hover, .link-primary:focus {
   color: RGBA(10, 88, 202, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(10, 88, 202, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(10, 88, 202, var(--bs-link-underline-opacity, 1)) !important;
@@ -235,8 +242,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-secondary:hover,
-.link-secondary:focus {
+.link-secondary:hover, .link-secondary:focus {
   color: RGBA(86, 94, 100, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(86, 94, 100, var(--bs-link-underline-opacity, 1)) !important;
@@ -247,8 +253,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-success:hover,
-.link-success:focus {
+.link-success:hover, .link-success:focus {
   color: RGBA(20, 108, 67, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(20, 108, 67, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(20, 108, 67, var(--bs-link-underline-opacity, 1)) !important;
@@ -259,8 +264,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-info:hover,
-.link-info:focus {
+.link-info:hover, .link-info:focus {
   color: RGBA(61, 213, 243, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(61, 213, 243, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(61, 213, 243, var(--bs-link-underline-opacity, 1)) !important;
@@ -271,8 +275,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-warning-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-warning-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-warning:hover,
-.link-warning:focus {
+.link-warning:hover, .link-warning:focus {
   color: RGBA(255, 205, 57, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(255, 205, 57, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(255, 205, 57, var(--bs-link-underline-opacity, 1)) !important;
@@ -283,8 +286,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-danger:hover,
-.link-danger:focus {
+.link-danger:hover, .link-danger:focus {
   color: RGBA(176, 42, 55, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(176, 42, 55, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(176, 42, 55, var(--bs-link-underline-opacity, 1)) !important;
@@ -295,8 +297,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-light:hover,
-.link-light:focus {
+.link-light:hover, .link-light:focus {
   color: RGBA(249, 250, 251, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(249, 250, 251, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(249, 250, 251, var(--bs-link-underline-opacity, 1)) !important;
@@ -307,8 +308,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-dark:hover,
-.link-dark:focus {
+.link-dark:hover, .link-dark:focus {
   color: RGBA(26, 30, 33, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
@@ -319,8 +319,7 @@
   -webkit-text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
-.link-body-emphasis:hover,
-.link-body-emphasis:focus {
+.link-body-emphasis:hover, .link-body-emphasis:focus {
   color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 0.75)) !important;
   -webkit-text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 0.75)) !important;
   text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 0.75)) !important;
@@ -354,8 +353,7 @@
   }
 }
 
-.icon-link-hover:hover > .bi,
-.icon-link-hover:focus-visible > .bi {
+.icon-link-hover:hover > .bi, .icon-link-hover:focus-visible > .bi {
   transform: var(--bs-icon-link-transform, translate3d(0.25em, 0, 0));
 }
 
@@ -366,7 +364,7 @@
 .ratio::before {
   display: block;
   padding-top: var(--bs-aspect-ratio);
-  content: '';
+  content: "";
 }
 .ratio > * {
   position: absolute;
@@ -529,7 +527,7 @@
   bottom: 0;
   left: 0;
   z-index: 1;
-  content: '';
+  content: "";
 }
 
 .text-truncate {
@@ -721,15 +719,15 @@
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: var(--bs-box-shadow) !important;
 }
 
 .shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: var(--bs-box-shadow-sm) !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  box-shadow: var(--bs-box-shadow-lg) !important;
 }
 
 .shadow-none {
