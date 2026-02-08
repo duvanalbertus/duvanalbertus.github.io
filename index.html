@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -51,6 +51,19 @@
   </head>
 
   <body class="index-page">
+    <div class="lang-toggle-fixed" aria-label="Language toggle">
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="langSwitch"
+          checked
+        />
+        <label class="form-check-label" for="langSwitch" id="langLabel"
+          >EN</label
+        >
+      </div>
+    </div>
     <header id="header" class="header dark-background d-flex flex-column">
       <i class="header-toggle d-xl-none bi bi-list"></i>
 
@@ -80,25 +93,32 @@
         <ul>
           <li>
             <a href="#home" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
+              ><i class="bi bi-house navicon"></i
+              ><span data-i18n="nav.home">Home</span></a
             >
           </li>
           <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+            <a href="#about"
+              ><i class="bi bi-person navicon"></i>
+              <span data-i18n="nav.about">About</span></a
+            >
           </li>
           <li>
             <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+              ><i class="bi bi-file-earmark-text navicon"></i>
+              <span data-i18n="nav.resume">Resume</span></a
             >
           </li>
           <li>
             <a href="#portfolio"
-              ><i class="bi bi-images navicon"></i> Portfolio</a
+              ><i class="bi bi-images navicon"></i>
+              <span data-i18n="nav.portfolio">Portfolio</span></a
             >
           </li>
           <li>
             <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i> Contact</a
+              ><i class="bi bi-envelope navicon"></i>
+              <span data-i18n="nav.contact">Contact</span></a
             >
           </li>
         </ul>
@@ -121,8 +141,8 @@
             I'm
             <span
               class="typed"
-              data-typed-items="Workflow AI Developer, Software Developer, Freelancer"
-              >Workflow AI Developer</span
+              data-typed-items="AI Automation Specialist, Software Developer, Freelancer"
+              >AI Automation Specialist</span
             ><span
               class="typed-cursor typed-cursor--blink"
               aria-hidden="true"
@@ -140,7 +160,7 @@
       <section id="about" class="about section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>About</h2>
+          <h2 data-i18n="section.about">About</h2>
         </div>
         <!-- End Section Title -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -149,27 +169,30 @@
               <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" />
             </div>
             <div class="col-lg-8 content">
-              <h2>Workflow AI Developer &amp; Software Developer</h2>
-              <p class="py-3">
-                Salam kenal, perkenalkan saya Duvan Albertus bisa di panggil
-                Duvan, Saya seorang Software Developer dengan pengalaman lebih
-                dari 2 tahun dalam pengembangan aplikasi web dan desktop. Selain
-                itu, saya juga aktif sebagai freelancer yang mengerjakan
-                berbagai project kecil secara mandiri. Terampil menggunakan PHP,
-                JavaScript, Java, REST API, serta framework seperti Laravel dan
-                CMS Batflat. Berpengalaman membangun sistem efisien,
-                mengoptimalkan performa aplikasi, dan menghadirkan solusi sesuai
-                kebutuhan bisnis. Dalam 10 bulan terakhir, saya fokus mendalami
-                AI Automation untuk mengembangakan integrasi otomatisasi
-                berbasis AI, guna mengikuti perkembangan teknologi terbaru.
+              <h2>Software Developer &amp; AI Automation Specialist</h2>
+              <p class="py-3" data-i18n="about.paragraph">
+                Greetings, my name is Duvan Albertus, a Software Developer with
+                over 2 years of experience in web and desktop application
+                development. I am also an active freelancer, independently
+                handling various projects from the planning stage through to
+                implementation. I possess strong skills in PHP, JavaScript,
+                Java, REST APIs, as well as various supporting frameworks. I
+                have experience in building efficient systems, optimizing
+                application performance, and delivering solutions aligned with
+                business needs. Over the past year, I have been focusing on AI
+                Automation, particularly in the development and integration of
+                AI-based automation systems to keep pace with and adopt the
+                latest technological advancements.
               </p>
               <div class="row">
                 <div class="col-lg-6">
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Numor Telepon:</strong>
-                      <span>+62 851-8325-3224</span>
+                      <strong data-i18n="about.phoneLabel"
+                        >Numor Telepon:</strong
+                      >
+                      <span data-i18n="about.phone">+62 851-8325-3224</span>
                     </li>
                   </ul>
                 </div>
@@ -177,8 +200,10 @@
                   <ul>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>
-                      <span>albertusyuri4@gmail.com</span>
+                      <strong data-i18n="about.emailLabel">Email:</strong>
+                      <span data-i18n="about.email"
+                        >albertusyuri4@gmail.com</span
+                      >
                     </li>
                   </ul>
                 </div>
@@ -193,8 +218,8 @@
       <section id="skills" class="skills section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-          <p>
+          <h2 data-i18n="section.skills">Skills</h2>
+          <p data-i18n="section.skillsDesc">
             Berikut ini adalah beberapa bahasa pemrograman dan tools yang saya
             gunakan untuk membangun website, sistem, dan aplikasi.
           </p>
@@ -381,7 +406,7 @@
                 </div>
               </div>
             </div> -->
-           
+
             <!-- Java -->
             <div class="col-4 col-sm-3 col-md-2 mb-3">
               <div class="card text-center shadow-sm h-100 skill-card">
@@ -417,8 +442,8 @@
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-          <p>
+          <h2 data-i18n="section.resume">Resume</h2>
+          <p data-i18n="section.resumeDesc">
             Berikut adalah ringkasan latar belakang pendidikan dan pengalaman
             kerja saya sejak pertama kali terjun ke industri teknologi.
           </p>
@@ -428,12 +453,18 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Education</h3>
+              <h3 class="resume-title" data-i18n="resume.educationTitle">
+                Education
+              </h3>
               <div class="resume-item">
-                <h4>Manajemen Informatika</h4>
+                <h4 data-i18n="resume.edu1.title">Manajemen Informatika</h4>
                 <h5>2020 - 2023</h5>
-                <p><em>Politeknik Negeri Malang</em></p>
                 <p>
+                  <em data-i18n="resume.edu1.school"
+                    >Politeknik Negeri Malang</em
+                  >
+                </p>
+                <p data-i18n="resume.edu1.desc">
                   Pada tingkat pendidikan ini, saya sudah mulai mengenal dan
                   belajar menggunakan teknologi populer seperi bahasa
                   pemrograman PHP dan Java, saya juga mulai mempelajari
@@ -443,10 +474,14 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>Teknik Komputer Jaringan</h4>
+                <h4 data-i18n="resume.edu2.title">Teknik Komputer Jaringan</h4>
                 <h5>2017-2020</h5>
-                <p><em>SMK Pawyatan Daha 2 Kediri</em></p>
                 <p>
+                  <em data-i18n="resume.edu2.school"
+                    >SMK Pawyatan Daha 2 Kediri</em
+                  >
+                </p>
+                <p data-i18n="resume.edu2.desc">
                   Mulai mengenal pertama code pemerograman dan membuat landing
                   page pertama saya dengan menggunakan teknologi basic HTML,
                   CSS, dan Javascript
@@ -456,21 +491,25 @@
             </div>
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
+              <h3 class="resume-title" data-i18n="resume.experienceTitle">
+                Professional Experience
+              </h3>
               <div class="resume-item">
-                <h4>Staff IT Programmer</h4>
+                <h4 data-i18n="resume.exp1.title">Staff IT Programmer</h4>
                 <h5>2024 - Current</h5>
-                <p><em>RS Wilujeng Kediri </em></p>
+                <p>
+                  <em data-i18n="resume.exp1.company">RS Wilujeng Kediri </em>
+                </p>
                 <ul>
-                  <li>
+                  <li data-i18n="resume.exp1.desc1">
                     Menganailis kebutuhan fitur sistem untuk menunjang
                     operasional kesehatan rumah sakit
                   </li>
-                  <li>
+                  <li data-i18n="resume.exp1.desc2">
                     Membangun sistem informasi berbasis web dan dektop sesuai
                     kebutuhan operasional kesehatan rumah sakit
                   </li>
-                  <li>
+                  <li data-i18n="resume.exp1.desc3">
                     Melakukan maintenance sederhana pada perangkat hardware
                     komputer
                   </li>
@@ -479,14 +518,14 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>Freelancer Programmer</h4>
+                <h4 data-i18n="resume.exp2.title">Freelancer Programmer</h4>
                 <h5>2023 - Current</h5>
                 <p><em>-</em></p>
                 <ul>
-                  <li>
+                  <li data-i18n="resume.exp2.desc1">
                     Menganailis Kebutuhan dan fitur sistem yang diminta client
                   </li>
-                  <li>
+                  <li data-i18n="resume.exp2.desc2">
                     Membangun sistem informasi berbasis web sesuai kebutuhan
                     client
                   </li>
@@ -495,15 +534,21 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>UI / UX Designer</h4>
+                <h4 data-i18n="resume.exp3.title">UI / UX Designer</h4>
                 <h5>Juni 2022 - Agustus 2022</h5>
-                <p><em>CV. Visual Code Indonesia</em></p>
+                <p>
+                  <em data-i18n="resume.exp3.company"
+                    >CV. Visual Code Indonesia</em
+                  >
+                </p>
                 <ul>
-                  <li>Mengembangkan desain UI / UX Aplikasi Mobile.</li>
-                  <li>
+                  <li data-i18n="resume.exp3.desc1">
+                    Mengembangkan desain UI / UX Aplikasi Mobile.
+                  </li>
+                  <li data-i18n="resume.exp3.desc2">
                     Menganalisis kebutuhan pengguna melalui diagram alur bisnis.
                   </li>
-                  <li>
+                  <li data-i18n="resume.exp3.desc3">
                     Membuat desain wireframe, mockup, dan prototipe interaktif
                     sesuai diagram alur bisnis.
                   </li>
@@ -520,8 +565,8 @@
       <section id="portfolio" class="portfolio section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>
+          <h2 data-i18n="section.portfolio">Portfolio</h2>
+          <p data-i18n="section.portfolioDesc">
             Di bawah ini adalah kumpulan project yang pernah saya bangun — yaitu
             sistem aplikasi web/dekstop dan sistem workflow automation.
             Masing-masing mencerminkan proses belajar dan eksplorasi saya di
@@ -613,7 +658,7 @@
                 </div>
               </div>
 
-               <div
+              <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workflow"
               >
                 <div class="portfolio-content h-100">
@@ -1013,8 +1058,8 @@
       <section id="testimonials" class="testimonials section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Apa Kata Klien ?</h2>
-          <p>
+          <h2 data-i18n="section.testimonials">Apa Kata Klien ?</h2>
+          <p data-i18n="section.testimonialsDesc">
             Saya percaya bahwa kepuasan klien adalah ukuran utama kesuksesan
             sebuah proyek. Berikut beberapa testimoni dari mereka yang telah
             mempercayakan proyek web mereka kepada saya.
@@ -1054,7 +1099,7 @@
                 <div class="testimonial-item">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span
+                    <span data-i18n="testimonial.1.text"
                       >Saya sangat terbantu dengan sistem kasir dan manajemen
                       toko jamu yang dibuat. Sekarang saya bisa mencatat
                       penjualan, stok, dan laporan harian dengan mudah.
@@ -1063,8 +1108,8 @@
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <h3>Leo</h3>
-                  <h4>Pemilik Toko Jamu Leo</h4>
+                  <h3 data-i18n="testimonial.1.name">Leo</h3>
+                  <h4 data-i18n="testimonial.1.role">Pemilik Toko Jamu Leo</h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1073,7 +1118,7 @@
                 <div class="testimonial-item">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span
+                    <span data-i18n="testimonial.2.text"
                       >Sistem reservasi yang dibuat sangat membantu kami dalam
                       mengatur pemakaian gedung gereja. Proses booking jadi
                       lebih tertata dan transparan. Tim sangat responsif dan
@@ -1081,8 +1126,8 @@
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <h3>Yohanes Pratama</h3>
-                  <h4>Pengurus Gereja</h4>
+                  <h3 data-i18n="testimonial.2.name">Yohanes Pratama</h3>
+                  <h4 data-i18n="testimonial.2.role">Pengurus Gereja</h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1091,7 +1136,7 @@
                 <div class="testimonial-item">
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    <span
+                    <span data-i18n="testimonial.3.text"
                       >Sistem rekrutmen yang dibuatkan sangat membantu saya
                       menyelesaikan proyek akhir kuliah. Fitur-fiturnya lengkap
                       dan tampilannya rapi. Komunikasi selama pengerjaan juga
@@ -1099,8 +1144,8 @@
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <h3>Satrio</h3>
-                  <h4>Mahasiswa</h4>
+                  <h3 data-i18n="testimonial.3.name">Satrio</h3>
+                  <h4 data-i18n="testimonial.3.role">Mahasiswa</h4>
                 </div>
               </div>
               <!-- End testimonial item -->
@@ -1115,8 +1160,8 @@
       <section id="contact" class="contact section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>
+          <h2 data-i18n="section.contact">Contact</h2>
+          <p data-i18n="section.contactDesc">
             Jika Anda tertarik untuk bekerja sama, memiliki pertanyaan, atau
             ingin berdiskusi lebih lanjut mengenai proyek, silakan hubungi saya
             melalui form di bawah ini atau melalui kontak yang tersedia.
@@ -1218,7 +1263,9 @@
                       Your message has been sent. Thank you!
                     </div>
 
-                    <button type="submit">Kirim Pesan</button>
+                    <button type="submit" data-i18n="contact.sendButton">
+                      Kirim Pesan
+                    </button>
                   </div>
                 </div>
               </form>

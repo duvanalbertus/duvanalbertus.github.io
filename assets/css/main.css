@@ -12,9 +12,10 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
@@ -1290,7 +1291,9 @@ section,
   padding: 0.25rem;
   font-size: 0.8rem;
   border-radius: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* shadow awal */
 }
@@ -1331,5 +1334,35 @@ section,
   transform: scale(1.2);
 }
 
+/* Language toggle (moved from index.html) */
+.lang-toggle-fixed {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1050;
+  
+  padding: 8px 10px;
+  border-radius: 24px;
+  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
 
+.lang-toggle-fixed .form-check-input {
+  transform: scale(1.08);
+  transform-origin: center;
+}
 
+.lang-toggle-fixed #langLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lang-toggle-fixed {
+    color: #fff;
+  }
+}
